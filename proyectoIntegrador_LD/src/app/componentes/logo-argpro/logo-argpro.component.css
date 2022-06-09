@@ -1,0 +1,45 @@
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.redes img{
+    margin: 5px;
+}
+
+#logo-argpro {
+    width: 145px;
+}
+
+img {
+    width: 40px;
+    
+}
+
+.redes img:hover {
+    border-radius:50%;
+    box-shadow: 0px 0px 15px 15px #fff;
+}
+
+@media (max-width:575px) {
+    .container-fluid {
+        flex-direction: column;
+        padding: 35px;
+    }
+
+    .redes {
+        margin-top: 20px;
+    }
+
+    .redes img {
+        margin: 2px;
+    }
+}
+
+
+
+
+
+
+
