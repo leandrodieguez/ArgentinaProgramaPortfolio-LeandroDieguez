@@ -3,12 +3,14 @@
         <img src="../../../assets/APLogo-20-20.png" alt="" id="logo-argpro">
        </div>
        <div class="redes">
-            <a href="#"><img src="../../../assets/facebook.png" alt="facebook logo" id="facebook"></a>
-            <a href="#"><img src="../../../assets/instagram.png" alt="instagram logo" id="instagram"></a>
-            <a href="#"><img src="../../../assets/github.png" alt="github logo" id="github"></a>
-            <a href="#"><img src="../../../assets/linkedin.png" alt="linkedin logo" id="linkedin"></a>
-            <a href="#"><img src="../../../assets/twitter.png" alt="twitter logo" id="twitter"></a>
-            <button type="button" class="btn btn-outline-light">LOGIN</button>
+            <a href="https://www.facebook.com/" target="_blank"><img src="../../../assets/facebook.png" alt="facebook logo" id="facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="../../../assets/instagram.png" alt="instagram logo" id="instagram"></a>
+            <a href="https://github.com/leandrodieguez" target="_blank"><img src="../../../assets/github.png" alt="github logo" id="github"></a>
+            <a href="https://www.linkedin.com/in/leandro-dieguez-035301249/" target="_blank"><img src="../../../assets/linkedin.png" alt="linkedin logo" id="linkedin"></a>
+            <a href="https://www.twitter.com/" target="_blank"><img src="../../../assets/twitter.png" alt="twitter logo" id="twitter"></a>
+            <button type="button" class="btn btn-outline-light" (click)="login()" *ngIf="!isLogged">INGRESO</button>
+            <button type="button" class="btn btn-outline-light" (click)="onLogOut()" *ngIf="isLogged">CERRAR SESION</button>
+            
         </div>
         
 </div>
