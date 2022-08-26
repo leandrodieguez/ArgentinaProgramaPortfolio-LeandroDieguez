@@ -1,50 +1,32 @@
 <div class="container-fluid">
-    <div class="row ">
-        <h1 class="mb-5">Educacion</h1>
-        <div class="card-xp row featurette border border-dark mb-3 rounded">
-            <div class="col-lg-3 ">
-                <img src="../../../assets/amazon.png" class="rounded" style="height: 200px; width: 230px;" alt="">
-            </div>
-            <div class="col-lg-9 my-3">
-                <ul>
-                    <li>
-                        <h2>Estudio 1</h2> - <h3>(Años)</h3>
-                    </li>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam qui veritatis molestiae quis
-                        eveniet minima quo tenetur est ratione nobis minus, dicta sapiente maxime. Blanditiis voluptas
-                        debitis voluptates dignissimos eius?</p>
-                </ul>
-            </div>
+    <div class="row">
+        <h1>Educacion </h1>
+        <div class="col-lg-2 mt-3">
+            <button class="btn btn-primary" routerLink="/nuevaedu" *ngIf="isLogged">Agregar Educacion</button>
         </div>
-        <div class="card-xp row featurette border border-dark mb-3 rounded">
-            <div class="col-lg-3 mt-3">
-                <img src="../../../assets/project.jpg" class="rounded" style="height: 200px; width: 230px;" alt="">
-            </div>
-            <div class="col-lg-9 mt-3">
-                <ul>
-                    <li>
-                        <h2>Estudio 2</h2> - <h3>(Años)</h3>
-                    </li>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam qui veritatis molestiae quis
-                        eveniet minima quo tenetur est ratione nobis minus, dicta sapiente maxime. Blanditiis voluptas
-                        debitis voluptates dignissimos eius?</p>
-                </ul>
-            </div>
-        </div>
-        <div class="card-xp row featurette border border-dark mb-3 rounded">
-            <div class="col-lg-3 mt-3">
-                <img src="../../../assets/project.jpg" class="rounded" style="height: 200px; width: 230px;" alt="">
-            </div>
-            <div class="col-lg-9 mt-3">
-                <ul>
-                    <li>
-                        <h2>Estudio 3</h2> - <h3>(Años)</h3>
-                    </li>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam qui veritatis molestiae quis
-                        eveniet minima quo tenetur est ratione nobis minus, dicta sapiente maxime. Blanditiis voluptas
-                        debitis voluptates dignissimos eius?</p>
-                </ul>
-            </div>
+        <div class="col-lg-11 mt-4">
+            <table class="table">
+                <tbody>
+                    <tr *ngFor="let Educacion of educacion">
+                        <div class="card-xp row featurette border border-dark mb-3 rounded">
+                            <td>
+                                <h2 class="mt-3">{{Educacion.nombreE}}</h2>
+                            </td>
+                            <td>
+                                <p>{{Educacion.descripcionE}}</p>
+                            </td>
+                            <div>
+                                <td *ngIf="isLogged"><button type="button" class="btn btn-info me-3"
+                                        routerLink="/editedu/{{Educacion.id}}"><i
+                                            class="bi bi-pencil-fill"></i>EDITAR</button></td>
+                                <td *ngIf="isLogged"><button type="button" class="btn btn-danger"
+                                        (click)="delete(Educacion.id)"><i class="bi bi-trash-fill"></i>BORRAR</button>
+                                </td>
+                            </div>
+                        </div>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

@@ -8,16 +8,25 @@
             <table class="table">
                 <tbody>
                     <tr *ngFor="let Experiencia of expe">
-                        <td><h2 class="mt-3">{{Experiencia.nombreE}}</h2></td>
-                        <td><p>{{Experiencia.descripcionE}}</p></td>
-                        <td *ngIf="isLogged"><button type="button" class="btn btn-info" routerLink="/editexp/{{Experiencia.id}}"><i class="bi bi-pencil-fill"></i>EDITAR</button></td>
-                        <td *ngIf="isLogged"><button type="button" class="btn btn-danger" (click)="delete(Experiencia.id)"><i class="bi bi-trash-fill"></i>BORRAR</button></td>
+                        <div class="card-xp row featurette border border-dark mb-3 rounded">
+                            <td>
+                                <h2 class="mt-3">{{Experiencia.nombreE}}</h2>
+                            </td>
+                            <td>
+                                <p>{{Experiencia.descripcionE}}</p>
+                            </td>
+                            <div>
+                                <td *ngIf="isLogged"><button type="button" class="btn btn-info me-3"
+                                        routerLink="/editexp/{{Experiencia.id}}"><i
+                                            class="bi bi-pencil-fill"></i>EDITAR</button></td>
+                                <td *ngIf="isLogged"><button type="button" class="btn btn-danger"
+                                        (click)="delete(Experiencia.id)"><i class="bi bi-trash-fill"></i>BORRAR</button>
+                                </td>
+                            </div>
+                        </div>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 </div>
-
-
-

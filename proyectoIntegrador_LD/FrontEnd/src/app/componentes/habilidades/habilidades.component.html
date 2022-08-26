@@ -1,122 +1,35 @@
 <div class="container-fluid">
     <div class="row">
-    <h1 class="mb-5">Hard & Soft Skills</h1>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-        <circle-progress
-            [percent]="50"
-            [radius]="100"
-            [backgroundColor]="'#bdd1de'"
-            [imageSrc]="'../assets/html.png'"
-            [showImage]="true"
-            [showUnits]="false"
-            [imageHeight]="100"
-            [imageWidth]="100"
-            [showSubtitle]="false"
-            [outerStrokeWidth]="16"
-            [innerStrokeWidth]="8"
-            [outerStrokeColor]="'#e44d26'"
-            [innerStrokeColor]="'#e4784a'"
-            [animation]="true"
-            [animationDuration]="700"
-></circle-progress>
+        <h1 class="mb-5">Hard & Soft Skills</h1>
+        <div class="col-lg-2 mt-3">
+            <button class="btn btn-primary" routerLink="/nuevahab" *ngIf="isLogged">Agregar Habilidad</button>
         </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
+        <div class="skill text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let Habilidad of habilidad">
             <circle-progress
-                [percent]="45"
-                [radius]="100"
-                [backgroundColor]="'#bdd1de'"
-                [imageSrc]="'../assets/css.png'"
-                [showImage]="true"
-                [showUnits]="false"
-                [imageHeight]="100"
-                [imageWidth]="100"
-                [showSubtitle]="false"
-                [outerStrokeWidth]="16"
-                [innerStrokeWidth]="8"
-                [outerStrokeColor]="'#00008B'"
-                [innerStrokeColor]="'#3c9cd7'"
-                [animation]="true"
-                [animationDuration]="700"
-    ></circle-progress>
-        </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-                <circle-progress
-                    [percent]="35"
-                    [radius]="100"
-                    [backgroundColor]="'#bdd1de'"
-                    [imageSrc]="'../assets/jslogo.png'"
-                    [showImage]="true"
-                    [showUnits]="false"
-                    [imageHeight]="100"
-                    [imageWidth]="100"
-                    [showSubtitle]="false"
-                    [outerStrokeWidth]="16"
-                    [innerStrokeWidth]="8"
-                    [outerStrokeColor]="'#d5b931'"
-                    [innerStrokeColor]="'#fdd93d'"
-                    [animation]="true"
-                    [animationDuration]="700"
-        ></circle-progress>
-        </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-                    <circle-progress
-                        [percent]="55"
-                        [radius]="100"
-                        [backgroundColor]="'#bdd1de'"
-                        [imageSrc]="'../assets/GitHub-Logo.png'"
-                        [showImage]="true"
-                        [showUnits]="false"
-                        [imageHeight]="50"
-                        [imageWidth]="100"
-                        [showSubtitle]="false"
-                        [outerStrokeWidth]="16"
-                        [innerStrokeWidth]="8"
-                        [outerStrokeColor]="'#323232'"
-                        [innerStrokeColor]="'#000000'"
-                        [animation]="true"
-                        [animationDuration]="700"
-            ></circle-progress>
-        </div>
-        <div class="text-center col-sm-4 col-md-4 col-lg-4">
-                        <circle-progress
-                            [percent]="40"
-                            [radius]="100"
-                            [backgroundColor]="'#bdd1de'"
-                            [imageSrc]="'../assets/mysql.png'"
-                            [showImage]="true"
-                            [showUnits]="false"
-                            [imageHeight]="100"
-                            [imageWidth]="100"
-                            [showSubtitle]="false"
-                            [outerStrokeWidth]="16"
-                            [innerStrokeWidth]="8"
-                            [outerStrokeColor]="'#e48e00'"
-                            [innerStrokeColor]="'#00618a'"
-                            [animation]="true"
-                            [animationDuration]="700"
-                ></circle-progress>
-        </div>
-            <div class="text-center col-sm-4 col-md-4 col-lg-4">
-                            <circle-progress
-                                [percent]="45"
+                                [percent]="Habilidad.nivelH"
                                 [radius]="100"
+                                title="{{Habilidad.nombreH}}"
                                 [backgroundColor]="'#bdd1de'"
-                                [imageSrc]="'../assets/angular.png'"
-                                [showImage]="true"
+                                titleFontSize="3em"
                                 [showUnits]="false"
                                 [imageHeight]="100"
                                 [imageWidth]="100"
                                 [showSubtitle]="false"
                                 [outerStrokeWidth]="16"
                                 [innerStrokeWidth]="8"
-                                [outerStrokeColor]="'#ed0f0f'"
-                                [innerStrokeColor]="'#fff8f8'"
+                                [outerStrokeColor]="'#355c7d'"
+                                [innerStrokeColor]="'#02416d'"
                                 [animation]="true"
                                 [animationDuration]="700"
                     ></circle-progress>
+                    <div>
+                        <td *ngIf="isLogged"><button type="button" class="btn btn-info me-3"
+                                routerLink="/edithab/{{Habilidad.id}}"><i
+                                    class="bi bi-pencil-fill"></i>EDITAR</button></td>
+                        <td *ngIf="isLogged"><button type="button" class="btn btn-danger"
+                                (click)="delete(Habilidad.id)"><i class="bi bi-trash-fill"></i>BORRAR</button>
+                        </td>
+                    </div>
         </div>
-        <hr class="mt-4">
+        </div>
     </div>
-</div>
-
-

@@ -1,0 +1,17 @@
+<div class="container-fluid" *ngIf="habilidad">
+    <div class="row text-center">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="from-group">
+                    <label for="nombreE">Nombre de la Habilidad</label>
+                    <input type="text" class="form-control" id="nombreH" name="nombreH" [(ngModel)]="habilidad.nombreH" required="">
+                </div>
+                <div class="from-group mt-3">
+                    <label for="nivelH">Porcentaje</label>
+                    <input type="text" class="form-control" id="nivelH" name="nivelH" [(ngModel)]="habilidad.nivelH" required="">
+                </div>
+                <button class="btn btn-primary mt-3">Editar habilidad</button>
+            </form>
+        </div>
+    </div>
+</div>

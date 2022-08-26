@@ -19,6 +19,10 @@ import { interceptorProvider } from './service/interceptor-service';
 import { NewExperienciaComponent } from './componentes/experiencia/new-experiencia.component';
 import { EditExperienciaComponent } from './componentes/experiencia/edit-experiencia.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { NeweducacionComponent } from './componentes/educacion/neweducacion.component';
+import { EditeducacionComponent } from './componentes/educacion/editeducacion.component';
+import { NewhabilidadComponent } from './componentes/habilidades/newhabilidad.component';
+import { EdithabilidadComponent } from './componentes/habilidades/edithabilidad.component';
 
 
 
@@ -38,6 +42,10 @@ import { FooterComponent } from './componentes/footer/footer.component';
     NewExperienciaComponent,
     EditExperienciaComponent,
     FooterComponent,
+    NeweducacionComponent,
+    EditeducacionComponent,
+    NewhabilidadComponent,
+    EdithabilidadComponent,
   ],
   imports: [
     BrowserModule,
