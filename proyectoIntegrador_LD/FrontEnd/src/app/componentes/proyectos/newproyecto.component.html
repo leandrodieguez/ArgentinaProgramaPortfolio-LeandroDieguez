@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row text-center">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+                <div class="from-group">
+                    <label for="nombreP">Nombre del proyecto</label>
+                    <input type="text" class="form-control" id="nombreP" name="nombreP" [(ngModel)]="nombreP" required="">
+                </div>
+                <div class="from-group">
+                    <label for="DescripcionE">Descripcion del proyecto</label>
+                    <input type="text" class="form-control" id="DescripcionP" name="DescripcionP" [(ngModel)]="descripcionP" required="">
+                </div>
+                <div class="from-group">
+                    <label for="imgP">URL de la imagen</label>
+                    <input type="text" class="form-control" id="imgP" name="imgP" [(ngModel)]="imgP" required="">
+                </div>
+                <button class="btn btn-primary mt-3">Agregar educacion</button>
+            </form>
+        </div>
+    </div>
+</div>

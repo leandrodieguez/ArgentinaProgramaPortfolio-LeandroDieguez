@@ -23,6 +23,8 @@ import { NeweducacionComponent } from './componentes/educacion/neweducacion.comp
 import { EditeducacionComponent } from './componentes/educacion/editeducacion.component';
 import { NewhabilidadComponent } from './componentes/habilidades/newhabilidad.component';
 import { EdithabilidadComponent } from './componentes/habilidades/edithabilidad.component';
+import { NewproyectoComponent } from './componentes/proyectos/newproyecto.component';
+import { EditproyectoComponent } from './componentes/proyectos/editproyecto.component';
 
 
 
@@ -46,6 +48,8 @@ import { EdithabilidadComponent } from './componentes/habilidades/edithabilidad.
     EditeducacionComponent,
     NewhabilidadComponent,
     EdithabilidadComponent,
+    NewproyectoComponent,
+    EditproyectoComponent,
   ],
   imports: [
     BrowserModule,
