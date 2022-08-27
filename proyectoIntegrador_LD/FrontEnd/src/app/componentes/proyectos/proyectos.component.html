@@ -7,12 +7,12 @@
                 <button class="btn btn-primary" routerLink="/nuevopro" *ngIf="isLogged">Agregar Proyecto</button>
             </div>
         <div class="card-xp row featurette border border-dark mb-3 rounded" *ngFor="let Proyecto of proyecto">
-            <div class="col-md-7">
+            <div class="col-md-8">
             <h2 class="mb-5">{{Proyecto.nombreP}}</h2>
-            <p class="lead fs-4">{{Proyecto.descripcionP}}</p>
+            <p class="lead fs-3">{{Proyecto.descripcionP}}</p>
             </div>
 
-            <div class="col-md-5">
+            <div class="col-md-4">
             <a href="#"><img class="img-fluid border border-dark" src="{{Proyecto.imgP}}" alt=""></a>
             </div>
             <div>

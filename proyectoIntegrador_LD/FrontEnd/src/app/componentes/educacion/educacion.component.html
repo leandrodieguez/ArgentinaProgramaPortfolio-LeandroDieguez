@@ -9,8 +9,12 @@
                 <tbody>
                     <tr *ngFor="let Educacion of educacion">
                         <div class="card-xp row featurette border border-dark mb-3 rounded">
+                            <div class="col-md-3">
+                                <img class="img-fluid border border-dark" src="{{Educacion.imgE}}" alt="">
+                                </div>
+                                <div class="col-md-9">
                             <td>
-                                <h2 class="mt-3">{{Educacion.nombreE}}</h2>
+                                <h2 class="mt-3 me-2">{{Educacion.nombreE}}: </h2>
                             </td>
                             <td>
                                 <p>{{Educacion.descripcionE}}</p>
@@ -23,6 +27,7 @@
                                         (click)="delete(Educacion.id)"><i class="bi bi-trash-fill"></i>BORRAR</button>
                                 </td>
                             </div>
+                        </div>
                         </div>
                     </tr>
                 </tbody>
