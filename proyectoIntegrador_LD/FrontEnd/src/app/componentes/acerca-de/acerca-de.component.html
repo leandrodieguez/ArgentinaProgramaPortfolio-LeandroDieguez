@@ -1,18 +1,28 @@
-<div class="container-fluid">
+<div class="container-fluid" *ngFor="let Persona of persona">
+    <div>
+        <img src="{{Persona.banner}}" class="banner img-fluid rounded-bottom mt-3" alt="banner Portfolio">
+        <button *ngIf="isLogged" type="button" class="btn-banner btn btn-info me-3"
+            routerLink="/editbanner/{{Persona.id}}"><i
+                class="bi bi-pencil-fill"></i>EDITAR</button>
+    </div>
     <div class="row">
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <img src="../../../assets/fotodeperfil-2.jpg" class="img-fluid border border-dark" id="foto-perfil" alt="foto de perfil Leandro Dieguez">
+            <img src="{{Persona.img}}" class="border border-dark" id="foto-perfil" alt="foto de perfil Leandro Dieguez" height="230px">
         </div>
         <div class="mt-3 col-xs-12 col-sm-2 col-md-2 col-lg-2">
-            <p id="name" class="fs-3">Leandro Dieguez</p>
-            <p class="fs-5">Full Stack Developer Jr</p>
+            <p id="name" class="fw-semibold fs-3">{{Persona.nombre}} {{Persona.apellido}}</p>
+            <p class="fw-semibold fs-5">{{Persona.title}}</p>
+            <td *ngIf="isLogged"><button type="button" class="btn btn-info me-3"
+                routerLink="/editper/{{Persona.id}}"><i
+                    class="bi bi-pencil-fill"></i>EDITAR</button></td>
         </div>
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
             <span>
                 <h1>Acerca de mi</h1>
-                <p class="fs-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, soluta rem labore necessitatibus incidunt a aut ab, officia velit ducimus eligendi tenetur itaque. Nostrum molestiae voluptatum ut, distinctio mollitia animi.</p>
+                <p class="fw-semibold fs-5">{{Persona.about}}</p>
             </span>
         </div>
         <hr>
     </div>
 </div>
+

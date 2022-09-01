@@ -1,0 +1,13 @@
+<div class="container-fluid">
+    <div class="row text-center" *ngIf="persona">
+        <div>
+            <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+                <div class="from-group">
+                    <label for="banner">URL de la imagen</label>
+                    <input type="text" class="form-control" id="banner" name="banner" [(ngModel)]="persona.banner" required="">
+                </div>
+                <button class="btn btn-primary mt-3">Editar Datos</button>
+            </form>
+        </div>
+    </div>
+</div>

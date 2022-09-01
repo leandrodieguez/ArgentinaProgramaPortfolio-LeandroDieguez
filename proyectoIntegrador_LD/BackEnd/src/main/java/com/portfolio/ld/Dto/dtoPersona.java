@@ -1,41 +1,32 @@
-package com.portfolio.ld.Entity;
+package com.portfolio.ld.Dto;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 
 
-@Entity
-public class Persona {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class dtoPersona {
+    @NotBlank
     private String nombre;
+    @NotBlank
     private String apellido;
+    @NotBlank
     private String img;
+    @NotBlank
     private String about;
+    @NotBlank
     private String title;
+    @NotBlank
     private String banner;
 
-    public Persona() {
+    public dtoPersona() {
     }
 
-    public Persona(String nombre, String apellido, String img, String about, String title, String banner) {
+    public dtoPersona(String nombre, String apellido, String img, String about, String title, String banner) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.img = img;
         this.about = about;
         this.title = title;
         this.banner = banner;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombre() {

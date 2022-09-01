@@ -25,6 +25,8 @@ import { NewhabilidadComponent } from './componentes/habilidades/newhabilidad.co
 import { EdithabilidadComponent } from './componentes/habilidades/edithabilidad.component';
 import { NewproyectoComponent } from './componentes/proyectos/newproyecto.component';
 import { EditproyectoComponent } from './componentes/proyectos/editproyecto.component';
+import { EditpersonaComponent } from './componentes/acerca-de/editpersona.component';
+import { EditbannerComponent } from './componentes/acerca-de/editbanner.component';
 
 
 
@@ -50,6 +52,8 @@ import { EditproyectoComponent } from './componentes/proyectos/editproyecto.comp
     EdithabilidadComponent,
     NewproyectoComponent,
     EditproyectoComponent,
+    EditpersonaComponent,
+    EditbannerComponent,
   ],
   imports: [
     BrowserModule,
