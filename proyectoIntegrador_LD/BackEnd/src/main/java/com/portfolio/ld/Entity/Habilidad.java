@@ -41,7 +41,7 @@ public class Habilidad {
         return nivelH;
     }
 
-    public void setNivelH(int descripcionE) {
+    public void setNivelH(int nivelH) {
         this.nivelH = nivelH;
     }
     
