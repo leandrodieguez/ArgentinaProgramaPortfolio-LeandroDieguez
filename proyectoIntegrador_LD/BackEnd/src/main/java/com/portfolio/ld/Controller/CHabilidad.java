@@ -78,6 +78,8 @@ public class CHabilidad {
             return new ResponseEntity(new Mensaje("El campo no puede estar vacio"), HttpStatus.BAD_REQUEST);
         }
         
+        
+        
         Habilidad habilidad = sHabilidad.getOne(id).get();
         
         habilidad.setNombreH(dtohabilidad.getNombreH());

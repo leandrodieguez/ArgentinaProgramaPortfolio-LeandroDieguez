@@ -14,7 +14,11 @@
                     <label for="imgP">URL de la imagen</label>
                     <input type="text" class="form-control" id="imgP" name="imgP" [(ngModel)]="proyecto.imgP" required="">
                 </div>
-                <button class="btn btn-primary mt-3">Agregar educacion</button>
+                <div class="from-group">
+                    <label for="link">URL del Proyecto</label>
+                    <input type="text" class="form-control" id="link" name="link" [(ngModel)]="proyecto.link" required="">
+                </div>
+                <button class="btn btn-primary mt-3">Editar Proyecto</button>
             </form>
         </div>
     </div>
